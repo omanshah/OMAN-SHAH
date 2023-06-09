@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<script>
+        let pin =prompt("enter your PIN");
+	if(pin=="1234")
+	{
+		alert("welcome to atm");
+		let choice=prompt("enter choice \n enter 1 for balance check \n enter 2 for cash withdraw \n enter 3 for cash deposit  \n enter 4 for exit");
+		
+		let balance =5000;
+		switch (choice)
+			{
+			case '1':
+				alert("your current balance is : "+balance);
+			break;
+			case '2':
+				let withdraw=Number(prompt("enter withdraw amount"));
+				var result =balance -withdraw;
+					if(result <=500){
+							alert(" Insufficiuent balance ")
+                    }
+                    
+                    else {
+                        document.write (`<p> your balance is` +result )
+                    }
+				
+					break;
+                    case '3':
+				let deposit =Number( prompt("enter deposit amount"));
+				var result=balance + deposit;
+				alert("balance is " +result);
+				break;
+                    }
+			
+}
+</script>
+</body>
+</html>
